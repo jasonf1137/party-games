@@ -1,0 +1,13 @@
+services:
+  party-games:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # Uncomment once this is actually behind a real reverse proxy (a
+      # bare container with a port published directly, like this file's
+      # own default, has none) - see README's "Deploying to your own
+      # domain" for why this matters.
+      # TRUST_PROXY: "1"
+      PORT: "3000"
+    restart: unless-stopped

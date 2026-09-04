@@ -1,0 +1,27 @@
+{
+  "name": "party-games",
+  "version": "1.0.0",
+  "private": true,
+  "description": "23 real-time party games for your group chat - no app, no accounts, just a room code",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "simulate": "node scripts/simulate-players.js",
+    "playtest": "node scripts/playtest.js",
+    "test": "node scripts/playtest.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.19.2",
+    "nanoid": "^3.3.7",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.3"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
+  }
+}

@@ -1,0 +1,35 @@
+// True or False: bite-sized claims that are either straightforwardly true or
+// false. Kept as plain facts (not trick wording) since the fun is the
+// content, not gotchas.
+module.exports = [
+  { statement: "A group of flamingos is called a flamboyance.", isTrue: true },
+  { statement: "Bananas grow on trees.", isTrue: false },
+  { statement: "Honey never spoils if stored properly.", isTrue: true },
+  { statement: "Goldfish have a memory span of only a few seconds.", isTrue: false },
+  { statement: "The Great Wall of China is visible from space with the naked eye.", isTrue: false },
+  { statement: "Octopuses have three hearts.", isTrue: true },
+  { statement: "Lightning never strikes the same place twice.", isTrue: false },
+  { statement: "A day on Venus is longer than a year on Venus.", isTrue: true },
+  { statement: "Humans only use 10% of their brains.", isTrue: false },
+  { statement: "Sharks existed before trees.", isTrue: true },
+  { statement: "The Eiffel Tower can grow taller in the summer heat.", isTrue: true },
+  { statement: "Cracking your knuckles causes arthritis.", isTrue: false },
+  { statement: "It's illegal to own just one guinea pig in Switzerland.", isTrue: true },
+  { statement: "Glass is a slow-moving liquid.", isTrue: false },
+  { statement: "Cats always land on their feet.", isTrue: false },
+  { statement: "A bolt of lightning is hotter than the surface of the sun.", isTrue: true },
+  { statement: "Wombat poop is cube-shaped.", isTrue: true },
+  { statement: "The Amazon River has no bridges crossing its main stem.", isTrue: true },
+  { statement: "Chewing gum stays in your stomach for seven years if swallowed.", isTrue: false },
+  { statement: "Butterflies taste with their feet.", isTrue: true },
+  { statement: "Napoleon Bonaparte was unusually short for his era.", isTrue: false },
+  { statement: "The inventor of the frisbee was turned into a frisbee after he died.", isTrue: true },
+  { statement: "Polar bears have black skin under their white fur.", isTrue: true },
+  { statement: "You can hear a difference between hot and cold water being poured.", isTrue: true },
+  { statement: "Einstein failed math in school.", isTrue: false },
+  { statement: "Bulls become enraged at the color red.", isTrue: false },
+  { statement: "A shrimp's heart is located in its head.", isTrue: true },
+  { statement: "The shortest war in history lasted less than 40 minutes.", isTrue: true },
+  { statement: "Peanuts are true nuts.", isTrue: false },
+  { statement: "Some turtles can breathe through their butts.", isTrue: true }
+];

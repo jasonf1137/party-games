@@ -1,0 +1,22 @@
+module.exports = [
+  "Never have I ever gone skydiving.",
+  "Never have I ever eaten a bug on purpose.",
+  "Never have I ever fallen asleep in class or a meeting.",
+  "Never have I ever sent a text to the wrong person.",
+  "Never have I ever pretended to be sick to skip something.",
+  "Never have I ever forgotten someone's name right after meeting them.",
+  "Never have I ever gone a full day without checking my phone.",
+  "Never have I ever cried during a commercial.",
+  "Never have I ever sung karaoke in public.",
+  "Never have I ever laughed so hard I cried.",
+  "Never have I ever gotten lost in my own neighborhood.",
+  "Never have I ever eaten food off the floor.",
+  "Never have I ever accidentally liked an old photo while stalking someone's profile.",
+  "Never have I ever pretended to know a song I'd never heard.",
+  "Never have I ever walked into a glass door.",
+  "Never have I ever tried to play it cool after tripping in public.",
+  "Never have I ever binge-watched an entire season in one day.",
+  "Never have I ever talked to a pet like it could understand English.",
+  "Never have I ever showed up to an event on the wrong day.",
+  "Never have I ever pretended to be on the phone to avoid someone."
+];

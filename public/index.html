@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Party Games — play together from your phones</title>
+  <meta name="description" content="23 party games for your group chat. Heads Up, Fibbage-style bluffing, drawing, trivia and more — no app, no sign-up, just a room code." />
+  <meta name="theme-color" content="#121014" />
+
+  <!-- No og:url on purpose: this file is served as-is on whatever domain
+       someone deploys it to (README covers Render/Railway/Fly.io/a VPS), so
+       a hardcoded URL here would be wrong for every deployment but the
+       original one. og:image is a relative path for the same reason - real
+       crawlers (Facebook/Discord/Slack/iMessage) resolve it against the
+       page's own URL, so it stays correct wherever this ends up hosted. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Party Games" />
+  <meta property="og:description" content="23 party games for your group chat — no app, no sign-up, just a room code." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Party Games" />
+  <meta name="twitter:description" content="23 party games for your group chat — no app, no sign-up, just a room code." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FF4B3E'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' font-family='Arial'%3E%F0%9F%8E%B2%3C/text%3E%3C/svg%3E" />
+
+  <!-- Installable as a home-screen app - useful since this is meant to be played from a phone -->
+  <link rel="manifest" href="/manifest.json" />
+  <!-- iOS Safari specifically doesn't reliably rasterize SVG for this tag
+       (unlike the manifest icon above, which Android/Chrome handles fine
+       as SVG) - a real PNG is needed or "Add to Home Screen" can end up
+       with a blank/default icon on iPhones. -->
+  <link rel="apple-touch-icon" href="/icon-512.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Party Games" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <noscript>
+    <main style="max-width:640px;margin:0 auto;padding:20px 16px;">
+      <div class="brand">
+        <div class="mark">🎲</div>
+        <h1>Party Games</h1>
+      </div>
+      <div class="card center">
+        <h3>JavaScript is required</h3>
+        <p>This is a real-time multiplayer app - it needs JavaScript enabled
+        to connect everyone's screens together. Please enable it and reload.</p>
+      </div>
+    </main>
+  </noscript>
+  <!-- Everything else static outside #app (the sound toggle, the in-game
+       help button, its modal) is already hidden by default via its own
+       class - `.hidden`/pre-set inline state - except this one, which has
+       no reason to hide itself for a player with JS working normally.
+       With JS disabled, though, its click handler (in main.js) never
+       attaches, so it'd otherwise sit uselessly in the corner next to the
+       "JavaScript is required" message above - a real, if minor, bit of
+       clutter around an already-inert page. -->
+  <noscript><style>#soundToggle { display: none; }</style></noscript>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <button id="soundToggle" class="sound-toggle" title="Toggle sound effects" aria-label="Toggle sound effects">🔊</button>
+  <!-- Only visible during actual gameplay (toggled in render()) - a player
+       who joins via room code straight into an in-progress round never
+       sees the landing page's "How it works" explainer, and some games
+       (Word Bomb, Rank It, Category Countdown...) aren't self-explanatory
+       from the gameplay screen alone. Shows that specific game's existing
+       GAME_META description - no new content to author or keep in sync. -->
+  <button id="gameHelpBtn" class="game-help-btn hidden" title="How to play this game" aria-label="How to play this game">❓</button>
+  <!-- Lives outside #app on purpose - #app gets fully replaced on every
+       render() (including the once-a-second timer re-renders during an
+       active round), so showing this via the normal render pipeline would
+       mean re-rendering whatever game screen is currently up just to pop a
+       modal, risking the careful per-field draft-state some games rely on
+       to survive those re-renders. Shown/hidden and filled in directly via
+       DOM manipulation in showGameHelp()/hideGameHelp() instead. -->
+  <div id="gameHelpBackdrop" class="modal-backdrop hidden">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="gameHelpTitle" tabindex="-1">
+      <button id="closeGameHelpBtn" class="btn-ghost modal-close" aria-label="Close">✕</button>
+      <div id="gameHelpIcon" style="font-size:40px;text-align:center;margin-bottom:6px;"></div>
+      <h2 id="gameHelpTitle" style="text-align:center;margin-bottom:10px;"></h2>
+      <p id="gameHelpDesc" class="hint" style="text-align:center;"></p>
+    </div>
+  </div>
+  <main id="app"></main>
+  <!-- #app is fully replaced on every round/phase change with no other
+       announcement of its own - a screen reader would otherwise never know
+       a new round started, results came in, or it's your turn. Kept
+       separate from #toast (different purpose/lifecycle) and off-screen
+       rather than display:none so assistive tech still reaches it. -->
+  <div id="screenAnnouncer" class="sr-only" role="status" aria-live="polite"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

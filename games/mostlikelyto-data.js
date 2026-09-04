@@ -1,0 +1,22 @@
+module.exports = [
+  "Most likely to become famous",
+  "Most likely to survive a zombie apocalypse",
+  "Most likely to win the lottery and lose the ticket",
+  "Most likely to become a YouTuber",
+  "Most likely to fall asleep at a party",
+  "Most likely to become president",
+  "Most likely to cry during a movie",
+  "Most likely to eat the last slice without asking",
+  "Most likely to get lost using GPS",
+  "Most likely to start a business",
+  "Most likely to forget their own birthday",
+  "Most likely to become an astronaut",
+  "Most likely to talk their way out of a speeding ticket",
+  "Most likely to adopt ten pets",
+  "Most likely to win a reality TV show",
+  "Most likely to become a chef",
+  "Most likely to laugh at the worst possible moment",
+  "Most likely to move to another country",
+  "Most likely to be late to their own wedding",
+  "Most likely to become a superhero"
+];

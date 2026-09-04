@@ -1,0 +1,17 @@
+node_modules/
+
+# Local environment overrides (e.g. TRUST_PROXY, PORT) - never something to commit
+.env
+.env.local
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# npm logs, and any other stray log file (e.g. from redirecting
+# `node server.js`'s own stdout/stderr during local dev/testing)
+npm-debug.log*
+*.log

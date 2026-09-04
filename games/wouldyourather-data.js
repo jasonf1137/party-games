@@ -1,0 +1,22 @@
+module.exports = [
+  { optionA: "Be able to fly", optionB: "Be able to turn invisible" },
+  { optionA: "Never use social media again", optionB: "Never watch another movie or show again" },
+  { optionA: "Always have to sing instead of talk", optionB: "Always have to dance everywhere you walk" },
+  { optionA: "Live without music", optionB: "Live without air conditioning/heating" },
+  { optionA: "Have unlimited tacos for life", optionB: "Have unlimited pizza for life" },
+  { optionA: "Be the funniest person in the room", optionB: "Be the smartest person in the room" },
+  { optionA: "Time travel to the past", optionB: "Time travel to the future" },
+  { optionA: "Fight one horse-sized duck", optionB: "Fight a hundred duck-sized horses" },
+  { optionA: "Always be 10 minutes late", optionB: "Always be an hour early" },
+  { optionA: "Give up your phone for a month", optionB: "Give up your car for a month" },
+  { optionA: "Have the ability to talk to animals", optionB: "Have the ability to speak every human language" },
+  { optionA: "Be famous but broke", optionB: "Be rich but unknown" },
+  { optionA: "Live in a treehouse", optionB: "Live in a houseboat" },
+  { optionA: "Only be able to whisper", optionB: "Only be able to shout" },
+  { optionA: "Have a rewind button for your life", optionB: "Have a pause button for your life" },
+  { optionA: "Always know when someone is lying to you", optionB: "Always be able to get away with lying" },
+  { optionA: "Explore space", optionB: "Explore the deep ocean" },
+  { optionA: "Never have to sleep", optionB: "Never have to eat" },
+  { optionA: "Be able to teleport anywhere", optionB: "Be able to read minds" },
+  { optionA: "Lose all your money", optionB: "Lose all your photos and memories" }
+];

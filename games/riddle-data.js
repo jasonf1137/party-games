@@ -1,0 +1,22 @@
+module.exports = [
+  { riddle: "The more you take, the more you leave behind. What am I?", answers: ["footsteps", "footprints"] },
+  { riddle: "I speak without a mouth and hear without ears. What am I?", answers: ["echo", "an echo"] },
+  { riddle: "What has to be broken before you can use it?", answers: ["an egg", "egg"] },
+  { riddle: "I'm tall when I'm young and short when I'm old. What am I?", answers: ["candle", "a candle"] },
+  { riddle: "What has hands but can't clap?", answers: ["clock", "a clock"] },
+  { riddle: "What gets wetter the more it dries?", answers: ["towel", "a towel"] },
+  { riddle: "What has a neck but no head?", answers: ["bottle", "a bottle"] },
+  { riddle: "What can travel around the world while staying in a corner?", answers: ["stamp", "a stamp"] },
+  { riddle: "What has one eye but can't see?", answers: ["needle", "a needle"] },
+  { riddle: "What comes down but never goes up?", answers: ["rain"] },
+  { riddle: "What has many keys but can't open a single lock?", answers: ["piano", "a piano"] },
+  { riddle: "What kind of room has no doors or windows?", answers: ["mushroom", "a mushroom"] },
+  { riddle: "What runs but never walks, has a mouth but never talks?", answers: ["river", "a river"] },
+  { riddle: "What can you catch but not throw?", answers: ["a cold", "cold"] },
+  { riddle: "What has a thumb and four fingers but isn't alive?", answers: ["glove", "a glove"] },
+  { riddle: "What goes up but never comes down?", answers: ["age", "your age"] },
+  { riddle: "What invention lets you look right through a wall?", answers: ["window", "a window"] },
+  { riddle: "What has a head and a tail but no body?", answers: ["coin", "a coin"] },
+  { riddle: "What month of the year has 28 days?", answers: ["all of them", "all", "every month"] },
+  { riddle: "What is full of holes but still holds water?", answers: ["sponge", "a sponge"] }
+];

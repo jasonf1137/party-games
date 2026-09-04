@@ -1,0 +1,35 @@
+// Prompts for the Quiplash/Fibbage-style "Prompt Battle" game.
+// Players each answer the same prompt, then vote for their favorite answer.
+
+module.exports = [
+  "The worst possible name for a pizza restaurant.",
+  "What you'd least like to hear your surgeon say mid-operation.",
+  "The real reason dinosaurs went extinct.",
+  "A terrible superhero power.",
+  "What aliens would think is weird about humans.",
+  "The worst theme for a birthday party.",
+  "A bad excuse for being late to work.",
+  "What your pet is really thinking about you.",
+  "The worst tattoo idea.",
+  "A rejected slogan for a fast food chain.",
+  "The most useless superpower.",
+  "What grandma really keeps in that purse.",
+  "A bad name for a boy band.",
+  "The worst thing to say on a first date.",
+  "What robots will complain about once they take over.",
+  "A ridiculous new Olympic sport.",
+  "The worst gift to give at a wedding.",
+  "What your search history says about you.",
+  "The world's least relaxing spa treatment.",
+  "A terrible catchphrase for a villain.",
+  "The worst possible fortune cookie message.",
+  "What cavemen actually argued about.",
+  "A bad idea for a reality TV show.",
+  "The worst thing to find in your takeout.",
+  "What your houseplants gossip about.",
+  "The least inspiring motivational poster.",
+  "A terrible mascot for a cereal brand.",
+  "The worst advice a parent could give.",
+  "What ghosts actually find scary.",
+  "The worst caption for a wedding photo."
+];
