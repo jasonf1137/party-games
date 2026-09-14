@@ -1692,9 +1692,16 @@
     const codeEl = document.getElementById("roomCodeText");
     if (room.streamerMode) {
       codeEl.addEventListener("click", () => {
+        clearTimeout(revealTimer);
+        if (roomCodeRevealed) {
+          // Already showing - a second tap hides it again immediately,
+          // rather than just restarting the same 4s auto-hide countdown.
+          roomCodeRevealed = false;
+          render();
+          return;
+        }
         roomCodeRevealed = true;
         render();
-        clearTimeout(revealTimer);
         revealTimer = setTimeout(() => {
           roomCodeRevealed = false;
           render();
