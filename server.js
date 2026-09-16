@@ -127,7 +127,7 @@ app.disable("x-powered-by");
 //   - connect-src 'self' covers the same-origin WebSocket upgrade.
 const CSP = [
   "default-src 'self'",
-  "script-src 'self'",
+  "script-src 'self' https://pagead2.googlesyndication.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data:",
