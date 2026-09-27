@@ -1215,6 +1215,7 @@
       </div>
       <p class="hint">Works great with friends on their phones — one link, no app to install.</p>
       <button id="howItWorksBtn" class="btn-ghost" style="margin: 4px auto 0;">❓ How does this work?</button>
+      <p class="center"><a href="/how-to-play.html" class="hint">📖 See how every game is played</a></p>
       ${showHowItWorks ? howItWorksModal() : ""}
     `;
   }
