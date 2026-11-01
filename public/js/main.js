@@ -1216,7 +1216,6 @@
       <p class="hint">Works great with friends on their phones — one link, no app to install.</p>
       <button id="howItWorksBtn" class="btn-ghost" style="margin: 4px auto 0;">❓ How does this work?</button>
       <p class="center"><a href="/how-to-play.html" class="hint">📖 See how every game is played</a></p>
-      <p class="center"><a href="/surprise.html" class="btn-ghost" style="display:inline-block;text-decoration:none;">🔴 Don't click this</a></p>
       ${showHowItWorks ? howItWorksModal() : ""}
     `;
   }
